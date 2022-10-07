@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import CartIcon from "../Cart/CartIcon";
-
 import style from "./Header.module.css";
 
 const Header = ({ cartItems }) => {

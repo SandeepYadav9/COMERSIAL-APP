@@ -8,6 +8,7 @@
   background-color: white;
   margin: 3px;
   outline: none;
+  cursor: pointer;
 }
 .sortedList select:hover, select:active{
   border-color: brown;

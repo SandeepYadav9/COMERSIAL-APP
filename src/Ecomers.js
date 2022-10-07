@@ -13,25 +13,26 @@ const Ecomers = (props) => {
     // All Ready have item in Cart
     const cartListsEx = cartItems.find((list) => list.id === cartList.id);
     // if all ready have item
+
     if (cartListsEx) {
       setCartItems(
         cartItems.map((list) =>
           list.id === cartList.id
             ? { ...cartListsEx, quantity: cartListsEx.quantity + 1 }
             : list
-        )
+             )
       );
     } else {
       setCartItems([...cartItems, { ...cartList, quantity: 1 }]);
     }
   };
-// Remove  one By one Cart Items
+  // Remove  one By one Cart Items
 
   const removeToCartHandler = (cartList) => {
     const cartListsEx = cartItems.find((list) => list.id === cartList.id);
 
     if (cartListsEx.quantity === 1) {
-      setCartItems(cartItems.filter((item) => item.id !== cartList.id)); 
+      setCartItems(cartItems.filter((item) => item.id !== cartList.id));
     } else {
       setCartItems(
         cartItems.map((item) =>
@@ -43,13 +44,12 @@ const Ecomers = (props) => {
     }
   };
 
-  //Delete all Lists 
+  //Delete all Lists
   const removeAllCartItem = () => {
     setCartItems([]);
   };
 
-
-  // Filtered via Category 
+  // Filtered via Category
   const onClickHandler = (category) => {
     // let filteredItems = [];
     if (category === "all") {
